@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alessia Dall'Ava — Psicologa e Psicoterapeuta a Milano</title>
+  <meta name="description" content="Uno spazio per conoscerti davvero. Psicoterapia a Milano con Alessia Dall'Ava, psicologa e psicoterapeuta in formazione. Primo colloquio gratuito." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ivory:     #f5efe0;
+      --bordeaux:  #5c1a1a;
+      --powder:    #d8e8ec;
+      --olive:     #7a7a4a;
+      --ink:       #1c1c1c;
+      --border:    #ddd3bf;
+      --muted-fg:  #5b5b4a;
+      --radius:    0.625rem;
+    }
+
+    html { scroll-behavior: smooth; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+
+    body {
+      background: var(--ivory);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+
+    /* ── NAV ── */
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(221,211,191,0.6);
+      background: rgba(245,239,224,0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    nav {
+      max-width: 72rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-logo em {
+      font-style: italic;
+      color: var(--bordeaux);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      color: rgba(28,28,28,0.8);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--bordeaux); }
+
+    .btn-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bordeaux);
+      color: var(--ivory);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-pill:hover { opacity: 0.9; }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--ink);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(28,28,28,0.3);
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-outline:hover { color: var(--bordeaux); border-color: var(--bordeaux); }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: 8rem 1.5rem 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--olive);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--ink);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--bordeaux);
+    }
+
+    .hero-subtitle {
+      max-width: 28rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--muted-fg);
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero-img-wrap {
+      position: relative;
+    }
+
+    .hero-placeholder {
+      aspect-ratio: 4/5;
+      width: 100%;
+      background: rgba(122,122,74,0.7);
+      border-radius: 2rem 6rem 2rem 2rem;
+    }
+
+    .hero-quote-card {
+      position: absolute;
+      bottom: -1.5rem;
+      left: -1.5rem;
+      max-width: 17rem;
+      background: var(--bordeaux);
+      color: var(--ivory);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+
+    .hero-quote-card p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .hero-quote-card small {
+      display: block;
+      margin-top: 0.75rem;
+      font-size: 0.7rem;
+      opacity: 0.7;
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-wrap {
+      overflow: hidden;
+      background: var(--bordeaux);
+      padding: 1rem 0;
+      color: var(--ivory);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 24s linear infinite;
+      white-space: nowrap;
+    }
+
+    .marquee-track span {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .marquee-dot {
+      margin: 0 2rem;
+      font-style: normal !important;
+      opacity: 0.6;
+      font-size: 1rem;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      background: var(--powder);
+      padding: 5rem 1.5rem;
+    }
+
+    .about-inner {
+      max-width: 72rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .section-eyebrow {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+
+    .eyebrow-bordeaux { color: var(--bordeaux); }
+    .eyebrow-olive    { color: var(--olive); }
+
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--bordeaux);
+    }
+
+    .body-text {
+      color: rgba(28,28,28,0.8);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    .body-text p + p { margin-top: 1rem; }
+
+    .about-img-wrap { position: relative; }
+
+    .about-placeholder {
+      aspect-ratio: 4/5;
+      width: 100%;
+      background: rgba(122,122,74,0.7);
+      border-radius: 2rem 2rem 2rem 6rem;
+    }
+
+    .about-badge {
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      background: var(--bordeaux);
+      color: var(--ivory);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.625rem 1.125rem;
+      border-radius: 9999px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    /* ── PERCORSO ── */
+    .percorso {
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+
+    .percorso-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+
+    .disturbi-intro {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--bordeaux);
+      margin-bottom: 1.5rem;
+    }
+
+    .disturbi-list {
+      list-style: none;
+      border-top: 1px solid var(--border);
+    }
+
+    .disturbi-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .disturbi-num {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--olive);
+      flex-shrink: 0;
+      min-width: 1.5rem;
+    }
+
+    .disturbi-name {
+      font-size: 1.05rem;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    .disturbi-note {
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: var(--muted-fg);
+    }
+
+    /* ── QUOTE ── */
+    .quote-section {
+      background: var(--bordeaux);
+      padding: 6rem 1.5rem;
+      color: var(--ivory);
+      text-align: center;
+    }
+
+    .quote-section blockquote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.5rem, 3.5vw, 3rem);
+      line-height: 1.35;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    /* ── CONTATTI ── */
+    .contatti {
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+
+    .contatti-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-card {
+      background: var(--powder);
+      border: 1px solid var(--border);
+      border-radius: 2rem 6rem 2rem 2rem;
+      padding: 2.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      flex-shrink: 0;
+      border-radius: 9999px;
+      background: rgba(92,26,26,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bordeaux);
+    }
+
+    .contact-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted-fg);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-value {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: var(--ink);
+      word-break: break-all;
+    }
+
+    .contact-cta-wrap {
+      padding-top: 0.5rem;
+    }
+
+    .btn-pill-full {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      background: var(--bordeaux);
+      color: var(--ivory);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-pill-full:hover { opacity: 0.9; }
+
+    .contact-disclaimer {
+      margin-top: 0.75rem;
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: var(--muted-fg);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      padding: 3rem 1.5rem;
+      color: var(--ivory);
+    }
+
+    .footer-inner {
+      max-width: 72rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.125rem;
+    }
+
+    .footer-logo em {
+      font-style: italic;
+      color: #c98a8a;
+    }
+
+    .footer-note {
+      font-size: 0.75rem;
+      color: rgba(245,239,224,0.45);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 768px) {
+      .footer-inner { flex-direction: row; text-align: left; }
+      .hero { padding: 10rem 1.5rem 4rem; }
+    }
+
+    @media (max-width: 767px) {
+      .nav-links { display: none; }
+      .hero-grid,
+      .about-inner,
+      .percorso-grid,
+      .contatti-grid { grid-template-columns: 1fr; }
+      .hero-quote-card { position: static; margin-top: 1.5rem; max-width: 100%; }
+      .about-badge { top: 0.5rem; right: 0.5rem; }
+      .percorso-grid { gap: 3rem; }
+      .contact-card { border-radius: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav>
+      <a href="/" class="nav-logo">Alessia <em>Dall'Ava</em></a>
+      <ul class="nav-links">
+        <li><a href="#chi-sono">Chi sono</a></li>
+        <li><a href="#percorso">Il percorso</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+      <a href="#contatti" class="btn-pill">Scrivimi</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow">Psicologa · Psicoterapeuta in formazione · Milano</p>
+        <h1 class="hero-title font-serif">
+          Uno spazio<br>
+          per <em>conoscerti</em><br>
+          davvero.
+        </h1>
+        <p class="hero-subtitle">
+          Non sono qui per dirti come stare. Sono qui per capire insieme a te
+          come stai — e trovare, insieme, una strada che abbia senso per te.
+        </p>
+        <div class="hero-btns">
+          <a href="#contatti" class="btn-pill">Prenota un primo colloquio</a>
+          <a href="#percorso" class="btn-outline">Scopri il percorso</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <div class="hero-placeholder" aria-hidden="true"></div>
+        <div class="hero-quote-card">
+          <p>"La psicoterapia non è una tecnica che si applica a un paziente, ma una relazione che si cura con un paziente."</p>
+          <small>— Bruno Bara</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Ascolto<span class="marquee-dot">✦</span></span>
+      <span>Relazione<span class="marquee-dot">✦</span></span>
+      <span>Consapevolezza<span class="marquee-dot">✦</span></span>
+      <span>Cura<span class="marquee-dot">✦</span></span>
+      <span>Cambiamento<span class="marquee-dot">✦</span></span>
+      <span>Presenza<span class="marquee-dot">✦</span></span>
+      <span>Sintonizzazione<span class="marquee-dot">✦</span></span>
+      <span>Cooperazione<span class="marquee-dot">✦</span></span>
+      <span>Ascolto<span class="marquee-dot">✦</span></span>
+      <span>Relazione<span class="marquee-dot">✦</span></span>
+      <span>Consapevolezza<span class="marquee-dot">✦</span></span>
+      <span>Cura<span class="marquee-dot">✦</span></span>
+      <span>Cambiamento<span class="marquee-dot">✦</span></span>
+      <span>Presenza<span class="marquee-dot">✦</span></span>
+      <span>Sintonizzazione<span class="marquee-dot">✦</span></span>
+      <span>Cooperazione<span class="marquee-dot">✦</span></span>
+    </div>
+  </div>
+
+  <!-- CHI SONO -->
+  <section id="chi-sono" class="about">
+    <div class="about-inner">
+      <div>
+        <p class="section-eyebrow eyebrow-bordeaux">Chi sono</p>
+        <h2 class="section-title font-serif">
+          In terapia si cura<br>con ciò che si <em>è.</em>
+        </h2>
+        <div class="body-text">
+          <p>
+            Sono Alessia Dall'Ava, psicologa iscritta all'Albo e psicoterapeuta
+            in formazione presso il Centro di Terapia Cognitiva (CTC) di Milano,
+            con indirizzo cognitivo costruttivista relazionale. Mi sono formata
+            in una scuola che crede in una cosa semplice quanto radicale: che la
+            terapia funzioni non perché si applicano le tecniche giuste, ma
+            perché si crea la relazione giusta.
+          </p>
+          <p>
+            Lavoro con giovani adulti e adulti, in tutte le fasi della vita.
+            Porto in seduta curiosità, attenzione e — quando serve — anche un
+            po' di ironia. Perché la sofferenza va presa sul serio, ma non
+            sempre in modo solenne.
+          </p>
+        </div>
+      </div>
+      <div class="about-img-wrap">
+        <div class="about-placeholder" aria-hidden="true"></div>
+        <div class="about-badge">CTC Milano · Albo Psicologi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IL PERCORSO -->
+  <section id="percorso" class="percorso">
+    <div class="percorso-grid">
+      <div>
+        <p class="section-eyebrow eyebrow-olive">Il percorso</p>
+        <h2 class="section-title font-serif">
+          Un percorso che<br>prende forma <em>insieme.</em>
+        </h2>
+        <div class="body-text">
+          <p>
+            La sofferenza non nasce da pensieri sbagliati da correggere.
+            Nasce da storie, da relazioni, da schemi costruiti nel tempo per
+            sopravvivere — e che a un certo punto smettono di funzionare.
+            Il mio lavoro non è aggiustarti. È aiutarti a capire come
+            funzioni, per trovare tu stesso un modo diverso di stare al mondo.
+          </p>
+          <p>
+            Si comincia sempre con un primo colloquio conoscitivo gratuito —
+            un incontro senza impegno per capire se c'è sintonia. Il
+            cambiamento non si forza dall'esterno: emerge quando ci si sente
+            finalmente compresi e al sicuro. Da lì costruiamo tutto il
+            resto, insieme, ai tuoi tempi.
+          </p>
+        </div>
+        <a href="#contatti" class="btn-pill" style="margin-top:2rem;">Prenota un primo colloquio</a>
+      </div>
+      <div>
+        <p class="disturbi-intro">Lavoro, tra le altre cose, con:</p>
+        <ul class="disturbi-list">
+          <li><span class="disturbi-num">01</span><span class="disturbi-name">Disturbi d'ansia e attacchi di panico</span></li>
+          <li><span class="disturbi-num">02</span><span class="disturbi-name">Depressione e disturbi del tono dell'umore</span></li>
+          <li><span class="disturbi-num">03</span><span class="disturbi-name">Disturbi da stress post-traumatico (PTSD)</span></li>
+          <li><span class="disturbi-num">04</span><span class="disturbi-name">Traumi dello sviluppo e disturbi dissociativi</span></li>
+          <li><span class="disturbi-num">05</span><span class="disturbi-name">Disturbi ossessivo-compulsivi (DOC)</span></li>
+          <li><span class="disturbi-num">06</span><span class="disturbi-name">Disturbi dell'alimentazione</span></li>
+          <li><span class="disturbi-num">07</span><span class="disturbi-name">Disturbi di personalità</span></li>
+          <li><span class="disturbi-num">08</span><span class="disturbi-name">Disturbi psicotici</span></li>
+        </ul>
+        <p class="disturbi-note">
+          Non trovi ciò che stai cercando? Scrivimi: ogni storia è diversa e merita ascolto.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <blockquote>
+      "Non si tratta di diventare qualcun altro. Si tratta di tornare a casa dentro di sé."
+    </blockquote>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti" class="contatti">
+    <div class="contatti-grid">
+      <div>
+        <p class="section-eyebrow eyebrow-olive">Contatti</p>
+        <h2 class="section-title font-serif">
+          Scrivimi,<br><em>iniziamo da qui.</em>
+        </h2>
+        <p class="body-text" style="max-width:24rem;">
+          Rispondo personalmente a ogni messaggio. Il primo colloquio è
+          gratuito — è solo un momento per conoscerci, senza impegno e
+          senza fretta. Anche solo scrivere è già un primo passo.
+        </p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact-label">Studio</p>
+            <p class="contact-value">Piazza Imperatore Tito 6, 20137 Milano</p>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">alessia.dallava@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-cta-wrap">
+          <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20colloquio%20—%20alessiadallava.it" class="btn-pill-full">
+            Scrivimi per email
+          </a>
+          <p class="contact-disclaimer">Si aprirà il tuo client email. Rispondo entro 48 ore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-logo font-serif">Alessia <em>Dall'Ava</em></p>
+      <p class="footer-note">© 2026 · Psicologa e Psicoterapeuta in formazione · Milano</p>
+    </div>
+  </footer>
+
+</body>
+</html>
