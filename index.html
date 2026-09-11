@@ -560,6 +560,36 @@
       .percorso-grid { gap: 3rem; }
       .contact-card { border-radius: 1.5rem; }
     }
+
+    .booking-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 0.5rem;
+  min-width: 220px;
+  z-index: 20;
+}
+
+.booking-menu.open { display: block; }
+
+.booking-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.6rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.booking-option:hover { background: var(--powder); }
   </style>
 </head>
 <body>
@@ -804,5 +834,19 @@
       </svg>
     </a>
   </div>
+  <script>
+function toggleBookingMenu(btn) {
+  const menu = btn.nextElementSibling;
+  document.querySelectorAll('.booking-menu.open').forEach(m => {
+    if (m !== menu) m.classList.remove('open');
+  });
+  menu.classList.toggle('open');
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.booking-wrap')) {
+    document.querySelectorAll('.booking-menu.open').forEach(m => m.classList.remove('open'));
+  }
+});
+</script>
 </body>
 </html>
