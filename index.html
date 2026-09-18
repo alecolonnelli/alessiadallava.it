@@ -372,7 +372,57 @@
       line-height: 1.65;
       color: var(--muted-fg);
     }
+.percorso-full {
+  max-width: 42rem;
+}
 
+.percorso-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.percorso-card {
+  background: var(--powder);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem;
+  border-top: 3px solid var(--bordeaux);
+}
+
+.percorso-card-icon {
+  color: var(--bordeaux);
+  margin-bottom: 1rem;
+}
+
+.percorso-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.percorso-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(28,28,28,0.75);
+  margin-bottom: 1.25rem;
+}
+
+.percorso-card a.card-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--bordeaux);
+  text-decoration: none;
+}
+
+.percorso-card a.card-link:hover { text-decoration: underline; }
+
+@media (max-width: 767px) {
+  .percorso-cards { grid-template-columns: 1fr; }
+}
     /* ── QUOTE ── */
     .quote-section {
       background: var(--bordeaux);
