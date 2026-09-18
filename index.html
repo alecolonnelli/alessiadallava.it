@@ -374,9 +374,21 @@
     }
     
     .percorso-full {
-      max-width: 42rem;
+      max-width: 100%;
+      text-align: left;
     }
     
+    .percorso-full .body-text,
+    .percorso-full .section-title {
+      max-width: none;
+    }
+    
+    .percorso-btn-center {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+        
     .percorso-cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -397,20 +409,20 @@
     }
     
     .percorso-card h3 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: var(--ink);
-      margin-bottom: 0.6rem;
-      line-height: 1.3;
-    }
-    
-    .percorso-card p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: rgba(28,28,28,0.75);
-      margin-bottom: 1.25rem;
-    }
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.percorso-card p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(28,28,28,0.8);
+  margin-bottom: 1.25rem;
+}
     
     .percorso-card a.card-link {
       font-size: 0.85rem;
@@ -691,7 +703,7 @@
     <section class="hero">
   <div class="hero-grid">
     <div>
-      <p class="hero-eyebrow">Psicologa · Psicoterapeuta in formazione · Milano</p>
+      <p class="hero-eyebrow">Psicologa clinica · Milano</p>
       <h1 class="hero-title font-serif">
         Uno spazio<br>
         per <em>conoscerti</em><br>
@@ -700,7 +712,7 @@
       <p class="hero-subtitle">
         Dove la tua storia trova ascolto.
       </p>
-      <div class="hero-btns">
+      <div class="percorso-btn-center"">
         <div class="booking-wrap" style="position:relative; display:inline-block;">
           <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)">
             Prenota un primo colloquio
@@ -845,7 +857,14 @@
     </div>
   </div>
 </section>
-
+  
+<!-- QUOTE -->
+<section class="quote-section">
+  <blockquote>
+    "Non si cura solo la mente. Si ascolta anche il corpo, dove la sofferenza spesso trova le sue prime parole."
+  </blockquote>
+</section>
+  
   <!-- CONTATTI -->
   <section id="contatti" class="contatti">
     <div class="contatti-grid">
