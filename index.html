@@ -211,6 +211,25 @@
       opacity: 0.7;
     }
 
+    .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    background: var(--bordeaux);
+    color: var(--ivory);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    z-index: 9999;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: top 0.2s;
+  }
+  
+  .skip-link:focus {
+    top: 1rem;
+  }
+
     /* ── MARQUEE ── */
     .marquee-wrap {
       overflow: hidden;
@@ -689,6 +708,7 @@
   
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
 
   <!-- NAV -->
   <header>
@@ -717,7 +737,7 @@
   </header>
 
   <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="main-content">
   <div class="hero-grid">
     <div>
       <p class="hero-eyebrow">Psicologa clinica · Milano</p>
@@ -970,14 +990,38 @@
   <script>
 function toggleBookingMenu(btn) {
   const menu = btn.nextElementSibling;
+  const isOpen = menu.classList.contains('open');
+
   document.querySelectorAll('.booking-menu.open').forEach(m => {
-    if (m !== menu) m.classList.remove('open');
+    if (m !== menu) {
+      m.classList.remove('open');
+      const otherBtn = m.previousElementSibling;
+      if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+    }
   });
+  
   menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(!isOpen));
 }
+    
 document.addEventListener('click', function(e) {
   if (!e.target.closest('.booking-wrap')) {
-    document.querySelectorAll('.booking-menu.open').forEach(m => m.classList.remove('open'));
+    document.querySelectorAll('.booking-menu.open').forEach(m => {
+      m.classList.remove('open');
+      const btn = m.previousElementSibling;
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+
+// Chiusura con Esc e ritorno del focus al bottone — bonus, stesso componente
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.booking-menu.open').forEach(m => {
+      m.classList.remove('open');
+      const btn = m.previousElementSibling;
+      if (btn) { btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
+    });
   }
 });
 
