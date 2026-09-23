@@ -700,11 +700,11 @@
         <li><a href="#contatti">Contatti</a></li>
       </ul>
       <div class="booking-wrap" style="position:relative; display:inline-block;">
-  <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)">
+  <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)"
     aria-haspopup="true" aria-expanded="false" aria-controls="booking-menu-nav">
     Scrivimi
   </button>
-  <div class="booking-menu">
+  <div class="booking-menu" id="booking-menu-nav">
     <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20primo%20colloquio%20—%20alessiadallava.it&body=Ciao%20Alessia%2C%0A%0AVorrei%20prenotare%20un%20primo%20colloquio%20conoscitivo.%0A%0AGrazie" class="booking-option conversion-contact">
       ✉️ Scrivi via email
     </a>
@@ -731,10 +731,11 @@
       </p>
       <div class="hero-btns">
         <div class="booking-wrap" style="position:relative; display:inline-block;">
-          <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)">
+          <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)"
+          aria-haspopup="true" aria-expanded="false" aria-controls="booking-menu-hero">
             Prenota un primo colloquio
           </button>
-          <div class="booking-menu">
+          <div class="booking-menu" id="booking-menu-hero">
             <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20primo%20colloquio%20—%20alessiadallava.it&body=Ciao%20Alessia%2C%0A%0AVorrei%20prenotare%20un%20primo%20colloquio%20conoscitivo.%0A%0AGrazie" class="booking-option conversion-contact">
               ✉️ Scrivi via email
             </a>
@@ -840,10 +841,11 @@
     </div>
     <div class="percorso-btn-center">
     <div class="booking-wrap" style="position:relative; display:inline-block; margin-top:1rem;">
-      <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)">
+      <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)"
+      aria-haspopup="true" aria-expanded="false" aria-controls="booking-menu-percorso">
         Prenota un primo colloquio
       </button>
-      <div class="booking-menu">
+      <div class="booking-menu" id="booking-menu-percorso">
         <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20primo%20colloquio%20—%20alessiadallava.it&body=Ciao%20Alessia%2C%0A%0AVorrei%20prenotare%20un%20primo%20colloquio%20conoscitivo.%0A%0AGrazie" class="booking-option conversion-contact">
           ✉️ Scrivi via email
         </a>
