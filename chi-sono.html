@@ -726,9 +726,22 @@
       <li><a href="/chi-sono.html" aria-current="page">Chi sono</a></li>
       <li><a href="#ambiti">Servizi</a></li>
       <li><a href="#contatti">Contatti</a></li>
-      <li><a class="btn-pill" href="#contatti">Primo colloquio</a></li>
     </ul>
-  </nav></header>
+    <div class="booking-wrap" style="position:relative; display:inline-block;">
+  <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)"
+    aria-haspopup="true" aria-expanded="false" aria-controls="booking-menu-nav">
+    Scrivimi
+  </button>
+  <div class="booking-menu" id="booking-menu-nav">
+    <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20primo%20colloquio%20—%20alessiadallava.it&body=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo.%0A%0AGrazie" class="booking-option conversion-contact">
+      ✉️ Scrivi via email
+    </a>
+    <a href="https://wa.me/393338088278?text=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo." target="_blank" class="booking-option conversion-contact">
+      💬 Scrivi su WhatsApp
+    </a>
+  </div>
+  </nav>
+  </header>
   <main id="contenuto">
     <section class="page-main" aria-labelledby="titolo-pagina"><div class="intro-grid">
       <div class="intro-copy">
