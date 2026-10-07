@@ -155,6 +155,18 @@
     details p{color:var(--muted-fg);padding-top:1rem;line-height:1.75;max-width:48rem}
 
     /* CONTACT */
+    .contatti {
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+
+    .contatti-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    
     .contacts{max-width:72rem;margin:auto;padding:6rem 1.5rem}
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
     .contact-card{background:var(--powder);border:1px solid var(--border);border-radius:2rem 6rem 2rem 2rem;padding:2.5rem;box-shadow:0 2px 12px rgba(0,0,0,.04)}
@@ -364,32 +376,59 @@
     </div>
   </section>
 
-  <section class="contacts" id="contatti">
-    <div class="contact-grid">
+  
+ <!-- CONTATTI -->
+  <section id="contatti" class="contatti">
+    <div class="contatti-grid">
       <div>
-        <p class="eyebrow">Contatti</p>
-        <h2 class="section-title">Possiamo capire insieme se questo percorso è <em>adatto a te</em></h2>
-        <div class="body-text">
-          <p>Se vuoi raccontarmi brevemente cosa ti porta a cercare un supporto, puoi contattarmi per un primo confronto.</p>
-        </div>
+        <p class="section-eyebrow eyebrow-olive">Contatti</p>
+        <h2 class="section-title font-serif">
+          Scrivimi,<br><em>iniziamo da qui.</em>
+        </h2>
+        <p class="body-text" style="max-width:24rem;">
+          Rispondo personalmente a ogni messaggio. Il primo colloquio è un momento per conoscerci, senza impegno e
+          senza fretta. Anche solo scrivere è già un primo passo.
+        </p>
       </div>
-
       <div class="contact-card">
         <div class="contact-row">
-          <div class="contact-label">Studio</div>
-          <div class="contact-value">Milano · zona Porta Romana</div>
+          <div class="icon-circle">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 0 1 16 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+          <div>
+            <p class="contact-label">Studio</p>
+            <p class="contact-value">Piazza Imperatore Tito 6, 20137 Milano</p>
+          </div>
         </div>
         <div class="contact-row">
-          <div class="contact-label">Modalità</div>
-          <div class="contact-value">In presenza e, quando appropriato, online</div>
+         <div class="icon-circle">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      </svg>
+    </div>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">
+               <a href="mailto:alessia.dallava@gmail.com">
+               alessia.dallava@gmail.com
+              </a>
+            </p>
+          </div>
         </div>
         <div class="contact-row">
-          <div class="contact-label">Primo contatto</div>
-          <div class="contact-value">Scrivimi per raccontarmi brevemente la tua richiesta.</div>
-        </div>
-        <div class="contact-actions">
-          <a class="btn-pill" href="#">Scrivimi</a>
-          <a class="btn-outline" href="#">Torna ai servizi</a>
+          <div class="icon-circle">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
+      </svg>
+    </div>
+          <div>
+            <p class="contact-label">Telefono</p>
+            <p class="contact-value">3338088278</p>
+          </div>
         </div>
       </div>
     </div>
