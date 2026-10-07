@@ -146,15 +146,29 @@
 <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
 <header>
-  <nav aria-label="Navigazione principale">
-    <a class="nav-logo" href="#">Alessia <em>Dall'Ava</em></a>
-    <ul class="nav-links">
-      <li><a href="#">Chi sono</a></li>
-      <li><a href="#" aria-current="page">Di cosa mi occupo</a></li>
-      <li><a href="#">Il mio approccio</a></li>
-      <li><a class="btn-pill" href="#contatti">Contatti</a></li>
-    </ul>
-  </nav>
+   <nav>
+      <a href="/" class="nav-logo">Alessia <em>Dall'Ava</em></a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#chi-sono">Chi sono</a></li>
+        <li><a href="#percorso">Il mio approccio</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+      <div class="booking-wrap" style="position:relative; display:inline-block;">
+  <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)"
+    aria-haspopup="true" aria-expanded="false" aria-controls="booking-menu-nav">
+    Scrivimi
+  </button>
+  <div class="booking-menu" id="booking-menu-nav">
+    <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20primo%20colloquio%20—%20alessiadallava.it&body=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo.%0A%0AGrazie" class="booking-option conversion-contact">
+      ✉️ Scrivi via email
+    </a>
+    <a href="https://wa.me/393338088278?text=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo." target="_blank" class="booking-option conversion-contact">
+      💬 Scrivi su WhatsApp
+    </a>
+  </div>
+</div>
+    </nav>
 </header>
 
 <main id="contenuto">
