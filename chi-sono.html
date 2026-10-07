@@ -851,7 +851,55 @@
       </svg>
     </a>
   </div>
+<script>
+    
+function toggleBookingMenu(button) {
+  const wrap = button.closest('.booking-wrap');
+  const menu = wrap.querySelector('.booking-menu');
+  const isOpen = menu.classList.contains('open');
 
+  // Chiude eventuali altri menu aperti
+  document.querySelectorAll('.booking-menu.open').forEach(function(openMenu) {
+    openMenu.classList.remove('open');
+  });
+
+  document.querySelectorAll('.booking-trigger[aria-expanded="true"]').forEach(function(trigger) {
+    trigger.setAttribute('aria-expanded', 'false');
+  });
+
+  // Apre/chiude quello cliccato
+  if (!isOpen) {
+    menu.classList.add('open');
+    button.setAttribute('aria-expanded', 'true');
+  }
+}
+
+// Chiude il menu cliccando fuori
+document.addEventListener('click', function(event) {
+  if (!event.target.closest('.booking-wrap')) {
+    document.querySelectorAll('.booking-menu.open').forEach(function(menu) {
+      menu.classList.remove('open');
+    });
+
+    document.querySelectorAll('.booking-trigger[aria-expanded="true"]').forEach(function(trigger) {
+      trigger.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+
+// Chiude il menu con ESC
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    document.querySelectorAll('.booking-menu.open').forEach(function(menu) {
+      menu.classList.remove('open');
+    });
+
+    document.querySelectorAll('.booking-trigger[aria-expanded="true"]').forEach(function(trigger) {
+      trigger.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+</script>
     
   <script>document.addEventListener('click',function(event){if(event.target.closest('.conversion-contact') && typeof window.oaiq === 'function'){window.oaiq('measure','appointment_scheduled',{type:'customer_action'});}});</script>
 </body>
