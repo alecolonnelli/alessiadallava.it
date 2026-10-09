@@ -1,906 +1,915 @@
 <!doctype html>
 <html lang="it">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Chi sono | Alessia Rebecca Dall'Ava, psicologa a Milano</title>
-  <meta name="description" content="Conosci Alessia Rebecca Dall'Ava, psicologa iscritta all'Albo della Lombardia. Il suo percorso e il lavoro con adolescenti, adulti e famiglie a Milano e online.">
-  <link rel="canonical" href="https://alessiadallava.it/chi-sono.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --ivory:     #f5efe0;
-      --bordeaux:  #5c1a1a;
-      --powder:    #d8e8ec;
-      --olive:     #7a7a4a;
-      --olive-text: #6e6e43;
-      --ink:       #1c1c1c;
-      --border:    #ddd3bf;
-      --muted-fg:  #5b5b4a;
-      --radius:    0.625rem;
-    }
-
-    html { scroll-behavior: smooth; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
-
-    body {
-      background: var(--ivory);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .font-serif { font-family: 'Playfair Display', Georgia, serif; }
-
-    /* ── NAV ── */
-    header {
-      position: fixed;
-      inset: 0 0 auto 0;
-      z-index: 50;
-      border-bottom: 1px solid rgba(221,211,191,0.6);
-      background: rgba(245,239,224,0.85);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-    nav {
-      max-width: 72rem;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.5rem;
-    }
-
-    .nav-logo {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.125rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      color: var(--ink);
-      text-decoration: none;
-    }
-
-    .nav-logo em {
-      font-style: italic;
-      color: var(--bordeaux);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.875rem;
-      color: rgba(28,28,28,0.8);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--bordeaux); }
-
-    .btn-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--bordeaux);
-      color: var(--ivory);
-      font-size: 0.875rem;
-      font-weight: 500;
-      padding: 0.5rem 1.25rem;
-      border-radius: 9999px;
-      text-decoration: none;
-      transition: opacity 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-pill:hover { opacity: 0.9; }
-
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: transparent;
-      color: var(--ink);
-      font-size: 0.875rem;
-      font-weight: 500;
-      padding: 0.5rem 1.25rem;
-      border-radius: 9999px;
-      border: 1px solid rgba(28,28,28,0.3);
-      text-decoration: none;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .btn-outline:hover { color: var(--bordeaux); border-color: var(--bordeaux); }
-
-    /* ── HERO ── */
-    .hero {
-      max-width: 72rem;
-      margin: 0 auto;
-      padding: 8rem 1.5rem 4rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      color: var(--olive-text);
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2.8rem, 6vw, 4.5rem);
-      font-weight: 700;
-      line-height: 1.05;
-      color: var(--ink);
-      margin-bottom: 1.75rem;
-    }
-
-    .hero-title em {
-      font-style: italic;
-      color: var(--bordeaux);
-    }
-
-    .hero-subtitle {
-      max-width: 28rem;
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--muted-fg);
-      margin-bottom: 2.25rem;
-    }
-
-    .hero-btns {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-    .hero-img-wrap {
-      position: relative;
-    }
-
-    .hero-placeholder {
-      aspect-ratio: 4/5;
-      width: 100%;
-      background: rgba(122,122,74,0.7);
-      border-radius: 2rem 6rem 2rem 2rem;
-    }
-
-    .hero-quote-card {
-      position: absolute;
-      bottom: -1.5rem;
-      left: -1.5rem;
-      max-width: 17rem;
-      background: var(--bordeaux);
-      color: var(--ivory);
-      padding: 1.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-    }
-
-    .hero-quote-card p {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    .hero-quote-card small {
-      display: block;
-      margin-top: 0.75rem;
-      font-size: 0.7rem;
-      opacity: 0.7;
-    }
-
-    .skip-link {
-    position: absolute;
-    top: -100px;
-    left: 1rem;
-    background: var(--bordeaux);
-    color: var(--ivory);
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.5rem;
-    z-index: 9999;
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-    transition: top 0.2s;
-  }
-  
-  .skip-link:focus {
-    top: 1rem;
-  }
-
-    /* ── MARQUEE ── */
-    .marquee-wrap {
-      overflow: hidden;
-      background: var(--bordeaux);
-      padding: 1rem 0;
-      color: var(--ivory);
-    }
-
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: marquee 24s linear infinite;
-      white-space: nowrap;
-    }
-
-    .marquee-track span {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-    }
-
-    .marquee-dot {
-      margin: 0 2rem;
-      font-style: normal !important;
-      opacity: 0.6;
-      font-size: 1rem;
-    }
-
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .marquee-track { animation: none; }
-    }
-
-    /* ── ABOUT ── */
-    .about {
-      background: var(--powder);
-      padding: 5rem 1.5rem;
-    }
-
-    .about-inner {
-      max-width: 72rem;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .section-eyebrow {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-    }
-
-    .eyebrow-bordeaux { color: var(--bordeaux); }
-    .eyebrow-olive    { color: var(--olive-text); }
-
-    .section-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      line-height: 1.15;
-      color: var(--ink);
-      margin-bottom: 1.5rem;
-    }
-
-    .section-title em {
-      font-style: italic;
-      color: var(--bordeaux);
-    }
-
-    .body-text {
-      color: rgba(28,28,28,0.8);
-      line-height: 1.75;
-      font-size: 1rem;
-    }
-
-    .body-text p + p { margin-top: 1rem; }
-
-    .about-img-wrap { position: relative; }
-
-    .about-placeholder {
-      aspect-ratio: 4/5;
-      width: 100%;
-      background: rgba(122,122,74,0.7);
-      border-radius: 2rem 2rem 2rem 6rem;
-    }
-
-    .about-badge {
-      position: absolute;
-      top: -1rem;
-      right: -1rem;
-      background: var(--bordeaux);
-      color: var(--ivory);
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 0.625rem 1.125rem;
-      border-radius: 9999px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    }
-
-    /* ── PERCORSO ── */
-    .percorso {
-      max-width: 72rem;
-      margin: 0 auto;
-      padding: 5rem 1.5rem;
-    }
-
-    .percorso-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-    }
-
-    .disturbi-intro {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-size: 1.2rem;
-      color: var(--bordeaux);
-      margin-bottom: 1.5rem;
-    }
-
-    .disturbi-list {
-      list-style: none;
-      border-top: 1px solid var(--border);
-    }
-
-    .disturbi-list li {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .disturbi-num {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-size: 0.85rem;
-      color: var(--olive);
-      flex-shrink: 0;
-      min-width: 1.5rem;
-    }
-
-    .disturbi-name {
-      font-size: 1.05rem;
-      line-height: 1.35;
-      color: var(--ink);
-    }
-
-    .disturbi-note {
-      margin-top: 1.5rem;
-      font-size: 0.875rem;
-      line-height: 1.65;
-      color: var(--muted-fg);
-    }
-    
-    .percorso-full {
-      max-width: 100%;
-      text-align: left;
-    }
-    
-    .percorso-full .body-text,
-    .percorso-full .section-title {
-      max-width: none;
-    }
-    
-    .percorso-btn-center {
-      display: flex;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
-        
-    .percorso-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    
-    .percorso-card {
-      background: var(--powder);
-      border-radius: 1.25rem;
-      padding: 2rem 1.75rem;
-      border-top: 3px solid var(--bordeaux);
-    }
-    
-    .percorso-card-icon {
-      color: var(--bordeaux);
-      margin-bottom: 1rem;
-    }
-    
-    .percorso-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--ink);
-  margin-bottom: 0.75rem;
-  line-height: 1.3;
-}
-
-.percorso-card p {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: rgba(28,28,28,0.8);
-  margin-bottom: 1.25rem;
-}
-    
-    .percorso-card a.card-link {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--bordeaux);
-      text-decoration: none;
-    }
-    
-    .percorso-card a.card-link:hover { text-decoration: underline; }
-
-@media (max-width: 767px) {
-  .percorso-cards { grid-template-columns: 1fr; }
-}
-    /* ── QUOTE ── */
-    .quote-section {
-      background: var(--bordeaux);
-      padding: 6rem 1.5rem;
-      color: var(--ivory);
-      text-align: center;
-    }
-
-    .quote-section blockquote {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-size: clamp(1.5rem, 3.5vw, 3rem);
-      line-height: 1.35;
-      max-width: 48rem;
-      margin: 0 auto;
-    }
-
-    /* ── CONTATTI ── */
-    .contatti {
-      max-width: 72rem;
-      margin: 0 auto;
-      padding: 5rem 1.5rem;
-    }
-
-    .contatti-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-
-    .contact-card {
-      background: var(--powder);
-      border: 1px solid var(--border);
-      border-radius: 2rem 6rem 2rem 2rem;
-      padding: 2.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    }
-
-    .contact-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .contact-icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      flex-shrink: 0;
-      border-radius: 9999px;
-      background: rgba(92,26,26,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--bordeaux);
-    }
-
-    .contact-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted-fg);
-      margin-bottom: 0.25rem;
-    }
-
-    .contact-value {
-      font-size: 1rem;
-      line-height: 1.4;
-      color: var(--ink);
-      word-break: break-all;
-    }
-
-    .btn-pill-full {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      background: var(--bordeaux);
-      color: var(--ivory);
-      font-size: 0.875rem;
-      font-weight: 500;
-      padding: 1rem 2rem;
-      border-radius: 9999px;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .btn-pill-full:hover { opacity: 0.9; }
-
-    .contact-disclaimer {
-      margin-top: 0.75rem;
-      text-align: center;
-      font-size: 0.75rem;
-      line-height: 1.5;
-      color: var(--muted-fg);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--ink);
-      padding: 3rem 1.5rem;
-      color: var(--ivory);
-    }
-
-    .footer-inner {
-      max-width: 72rem;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      text-align: center;
-    }
-
-    .footer-logo {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.125rem;
-    }
-
-    .footer-logo em {
-      font-style: italic;
-      color: #c98a8a;
-    }
-
-    .footer-note {
-      font-size: 0.75rem;
-      color: rgba(245,239,224,0.6);
-    }
-
-    .footer-details {
-      font-size: 0.75rem;
-      color: rgba(245,239,224,0.6);
-      margin-top: 0.25rem;
-    }
-
-    .floating-actions {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-    }
-    
-    .btn-float {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,.25);
-      text-decoration: none;
-      transition: transform 0.15s ease, opacity 0.2s;
-    }
-    
-    .btn-float:hover {
-      transform: scale(1.08);
-      opacity: 0.9;
-    }
-    
-    .btn-float--whatsapp {
-      background: #25D366;
-    }
-    
-    .btn-float--email {
-      background: var(--bordeaux);
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (min-width: 768px) {
-      .footer-inner { flex-direction: row; text-align: left; }
-      .hero { padding: 10rem 1.5rem 4rem; }
-    }
-
-    @media (max-width: 767px) {
-      .nav-links { display: none; }
-      .hero-grid,
-      .about-inner,
-      .percorso-grid,
-      .contatti-grid { grid-template-columns: 1fr; }
-      .hero-quote-card { position: static; margin-top: 1.5rem; max-width: 100%; }
-      .about-badge { top: 0.5rem; right: 0.5rem; }
-      .percorso-grid { gap: 3rem; }
-      .contact-card { border-radius: 1.5rem; }
-    }
-
-    .booking-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  left: 0;
-  background: var(--ivory);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  padding: 0.5rem;
-  min-width: 220px;
-  z-index: 20;
-}
-
-.booking-menu.open { display: block; }
-
-.booking-option {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.75rem 1rem;
-  border-radius: 0.6rem;
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: background 0.15s;
-}
-
-.booking-option:hover { background: var(--powder); }
-  .booking-trigger {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 0.5rem 1.25rem;
-  border-radius: 9999px;
-  margin: 0;
-  -webkit-appearance: none;
-  appearance: none;
-}
-    
-  
-.page-main{max-width:72rem;margin:auto;padding:9rem 1.5rem 5rem}.intro-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:4rem;align-items:start}.intro-copy{max-width:680px}.intro-copy p{margin-bottom:1.2rem}.intro-copy .section-title{margin-top:2.6rem;margin-bottom:1rem;font-size:clamp(1.6rem,3vw,2.2rem)}.intro-copy .section-title:first-of-type{margin-top:0}.placeholder{color:var(--muted-fg);border-left:2px solid var(--border);padding:.45rem 0 .45rem 1rem}.portrait{position:sticky;top:7rem;aspect-ratio:4/5;background:rgba(122,122,74,.65);border-radius:2rem 6rem 2rem 2rem;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;color:var(--ivory)}.small-note{font-size:.8rem;color:var(--muted-fg);margin-top:1rem}.areas{background:var(--powder);padding:5rem 1.5rem}.areas-inner{max-width:72rem;margin:auto}.areas-intro{max-width:690px}.service-links{list-style:none;margin-top:2rem;border-top:1px solid var(--border)}.service-links li{border-bottom:1px solid var(--border)}.service-links a{display:flex;justify-content:space-between;gap:1rem;padding:1.4rem .3rem;text-decoration:none;color:var(--ink);align-items:center}.service-links a:hover{color:var(--bordeaux)}.service-links strong{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem}.service-links small{display:block;color:var(--muted-fg);font-size:.88rem;margin-top:.3rem}.contacts{max-width:72rem;margin:auto;padding:5rem 1.5rem}.contacts .contatti-grid{align-items:start}.contact-card{border-radius:2rem 6rem 2rem 2rem}.contact-value{word-break:normal}.contact-row{margin-bottom:1.3rem}.mock-tag{font-size:.7rem;letter-spacing:.1em;color:var(--olive-text);text-transform:uppercase;margin-bottom:1rem}.nav-links a[aria-current=page]{color:var(--bordeaux);font-weight:600}@media(max-width:767px){.page-main{padding:7rem 1.5rem 3rem}.intro-grid,.contatti-grid{grid-template-columns:1fr}.portrait{position:static;max-height:360px;aspect-ratio:4/3;order:-1}.areas,.contacts{padding:3.5rem 1.5rem}.nav-links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.7rem}nav{display:block}.nav-links a{font-size:.75rem}.nav-links .btn-pill{display:none}}
-
-.portrait { display:block; width:100%; height:auto; position:sticky; object-fit:cover; }
-.intro-copy p { color:var(--muted-fg); }
-.intro-copy .hero-eyebrow { color:var(--olive-text); }
-.intro-copy .hero-title { color:var(--ink); }
-.intro-copy .btn-outline { margin-top:.5rem; }
-.contact-actions { display:flex; gap:.7rem; flex-wrap:wrap; margin-top:1.5rem; }
-.contact-value a { color:inherit; }
-.service-links a:focus-visible,.btn-pill:focus-visible,.btn-outline:focus-visible,.nav-links a:focus-visible { outline:3px solid var(--bordeaux); outline-offset:3px; }
-@media(max-width:767px){.portrait{position:static;aspect-ratio:4/5;max-height:none}.intro-grid{gap:2rem}.nav-links{justify-content:flex-start}}
-</style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {"@type":"ProfilePage","@id":"https://alessiadallava.it/chi-sono.html#webpage","url":"https://alessiadallava.it/chi-sono.html","name":"Chi sono | Alessia Rebecca Dall'Ava","inLanguage":"it-IT","isPartOf":{"@id":"https://alessiadallava.it/#website"},"mainEntity":{"@id":"https://alessiadallava.it/#alessia"}},
-      {"@type":"Person","@id":"https://alessiadallava.it/#alessia","name":"Alessia Rebecca Dall'Ava","jobTitle":"Psicologa","description":"Psicologa iscritta all'Albo degli Psicologi della Lombardia n. 28010 e psicoterapeuta in formazione presso il Centro Terapia Cognitiva di Milano.","identifier":{"@type":"PropertyValue","name":"Numero di iscrizione all'Albo degli Psicologi della Lombardia","value":"28010"},"image":"https://alessiadallava.it/alessia-dallava-psicologa-milano-zona-porta-romana.jpg","workLocation":{"@id":"https://alessiadallava.it/#studio"}},
-      {"@type":"WebSite","@id":"https://alessiadallava.it/#website","url":"https://alessiadallava.it/","name":"Alessia Dall'Ava - Psicologa a Milano"},
-      {"@type":"Place","@id":"https://alessiadallava.it/#studio","name":"Studio di psicologia - Alessia Dall'Ava","address":{"@type":"PostalAddress","streetAddress":"Piazza Imperatore Tito 6","addressLocality":"Milano","addressRegion":"Lombardia","addressCountry":"IT"}}
-    ]
-  }
-  </script>
-  <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"EUYPCWoPrYzXXTCAuu3XTu"});</script>
-</head>
-<body>
-  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
-  <header><nav aria-label="Navigazione principale">
-    <a class="nav-logo" href="/">Alessia <em>Dall'Ava</em></a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/chi-sono.html" aria-current="page">Chi sono</a></li>
-      <li><a href="#ambiti">Servizi</a></li>
-      <li><a href="#contatti">Contatti</a></li>
-    </ul>
-    <div class="booking-wrap" style="position:relative; display:inline-block;">
-  <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)"
-    aria-haspopup="true" aria-expanded="false" aria-controls="booking-menu-nav">
-    Scrivimi
-  </button>
-  <div class="booking-menu" id="booking-menu-nav">
-    <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20primo%20colloquio%20—%20alessiadallava.it&body=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo.%0A%0AGrazie" class="booking-option conversion-contact">
-      ✉️ Scrivi via email
-    </a>
-    <a href="https://wa.me/393338088278?text=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo." target="_blank" class="booking-option conversion-contact">
-      💬 Scrivi su WhatsApp
-    </a>
-  </div>
-  </nav>
-  </header>
-  <main id="contenuto">
-    <section class="page-main" aria-labelledby="titolo-pagina"><div class="intro-grid">
-      <div class="intro-copy">
-        <p class="hero-eyebrow">Chi sono · Psicologa a Milano</p>
-        <h1 class="hero-title" id="titolo-pagina">Piacere, sono <em>Alessia.</em></h1>
-        <p>Sono Alessia Rebecca Dall'Ava, psicologa iscritta all'Albo degli Psicologi della Lombardia. Nel mio studio a Milano offro uno spazio di ascolto e sostegno a chi attraversa un momento di difficoltà o di cambiamento, oppure desidera conoscere meglio sé stesso, le proprie emozioni e il proprio modo di stare in relazione con gli altri.</p>
-        <p>Lavoro con adolescenti, adulti e famiglie, accogliendo ogni persona con attenzione e rispetto per la propria storia. Ricevo nello studio in Piazza Imperatore Tito 6, a Milano, e online.</p>
-        <h2 class="section-title">Il mio <em>percorso.</em></h2>
-        <p>Sono iscritta all'Albo A degli Psicologi della Lombardia con il numero 28010. Sto proseguendo la mia formazione in psicoterapia presso il Centro Terapia Cognitiva di Milano. La formazione è per me parte di un lavoro che richiede studio, attenzione e disponibilità a continuare a imparare.</p>
-        <h2 class="section-title">Il mio modo di <em>lavorare.</em></h2>
-        <p>Il primo incontro è un'occasione per conoscerci e comprendere che cosa ti porta qui. Da quel momento possiamo costruire insieme un percorso che tenga conto dei tuoi tempi, delle tue esigenze e delle domande che desideri esplorare.</p>
-        <p>Mi interessa creare uno spazio in cui sia possibile dare un nome a ciò che si vive e guardare con più chiarezza alle proprie relazioni. Il lavoro prende forma nel dialogo, senza dare per scontato che esista una risposta uguale per tutti.</p>
-        <!-- Quando la pagina Approccio sarà online, inserire qui il link all'URL effettivo. -->
-      </div>
-      <aside aria-label="Ritratto di Alessia"><img class="portrait" src="alessia-dallava-psicologa-milano-zona-porta-romana.jpg" alt="Alessia Rebecca Dall'Ava, psicologa a Milano" width="600" height="750"></aside>
-    </div></section>
-    <section class="areas" id="ambiti" aria-labelledby="titolo-ambiti"><div class="areas-inner">
-      <p class="section-eyebrow eyebrow-bordeaux">Di cosa mi occupo</p>
-      <h2 class="section-title" id="titolo-ambiti">Come posso <em>accompagnarti.</em></h2>
-      <p class="body-text areas-intro">Propongo percorsi di sostegno psicologico individuale e supporto a famiglie e genitori. Mi occupo anche di valutazione neuropsicologica. Puoi leggere una descrizione di ciascun servizio nella pagina dedicata.</p>
-      <ul class="service-links">
-        <li><a href="/supporto-psicologico.html#individuale"><span><strong>Supporto psicologico individuale</strong><small>Uno spazio per momenti di difficoltà, cambiamento o ricerca di sé.</small></span><span aria-hidden="true">↗</span></a></li>
-        <li><a href="/supporto-alla-genitorialita.html#famiglie"><span><strong>Supporto a famiglie e genitorialità</strong><small>Un accompagnamento nelle sfide della crescita e delle relazioni familiari.</small></span><span aria-hidden="true">↗</span></a></li>
-        <li><a href="/valutazione-cognitiva.html#valutazione"><span><strong>Valutazione neuropsicologica</strong><small>Valutazione del funzionamento cognitivo per bambini, adolescenti e adulti.</small></span><span aria-hidden="true">↗</span></a></li>
-      </ul>
-    </div></section>
-
-
-  <!-- CONTATTI -->
-  <section id="contatti" class="contatti">
-    <div class="contatti-grid">
-      <div>
-        <p class="section-eyebrow eyebrow-olive">Contatti</p>
-        <h2 class="section-title font-serif">
-          Scrivimi,<br><em>iniziamo da qui.</em>
-        </h2>
-        <p class="body-text" style="max-width:24rem;">
-          Rispondo personalmente a ogni messaggio. Il primo colloquio è un momento per conoscerci, senza impegno e
-          senza fretta. Anche solo scrivere è già un primo passo.
-        </p>
-      </div>
-      <div class="contact-card">
-        <div class="contact-row">
-          <div class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
-          <div>
-            <p class="contact-label">Studio</p>
-            <p class="contact-value">Piazza Imperatore Tito 6, 20137 Milano</p>
+  <head>
+    <!--
+      MAPPA DEL FILE — Cerca queste etichette con Ctrl+F:
+      01 METADATI E SEO | 02 FONT | 03 CSS | 04 DATI STRUTTURATI
+      05 PIXEL | 06 NAVIGAZIONE | 07 PRESENTAZIONE | 08 SERVIZI
+      09 CONTATTI | 10 FOOTER | 11 CONTATTI FISSI | 12 JAVASCRIPT
+      I testi della pagina iniziano da 07 PRESENTAZIONE.
+      Le regole per schermi piccoli si trovano nei blocchi RESPONSIVE.
+    -->
+
+    <!-- 01 METADATI E SEO -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chi sono | Alessia Rebecca Dall'Ava, psicologa a Milano</title>
+    <meta name="description" content="Conosci Alessia Rebecca Dall'Ava, psicologa iscritta all'Albo della Lombardia. Il suo percorso e il lavoro con adolescenti, adulti e famiglie a Milano e online.">
+    <link rel="canonical" href="https://alessiadallava.it/chi-sono.html">
+    <!-- 02 FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- 03 CSS — STILI DELLA PAGINA -->
+    <style>
+      /* CSS 01 — BASE: RESET, COLORI E TIPOGRAFIA */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ivory: #f5efe0;
+        --bordeaux: #5c1a1a;
+        --powder: #d8e8ec;
+        --olive: #7a7a4a;
+        --olive-text: #6e6e43;
+        --ink: #1c1c1c;
+        --border: #ddd3bf;
+        --muted-fg: #5b5b4a;
+        --radius: 0.625rem;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      }
+
+      body {
+        background: var(--ivory);
+        color: var(--ink);
+        font-size: 16px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .font-serif {
+        font-family: 'Playfair Display', Georgia, serif;
+      }
+
+      /* CSS 02 — HEADER E NAVIGAZIONE */
+      header {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 50;
+        border-bottom: 1px solid rgba(221,211,191,0.6);
+        background: rgba(245,239,224,0.85);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+
+      nav {
+        max-width: 72rem;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+      }
+
+      .nav-logo {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .nav-logo em {
+        font-style: italic;
+        color: var(--bordeaux);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        font-size: 0.875rem;
+        color: rgba(28,28,28,0.8);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--bordeaux);
+      }
+
+      /* CSS 03 — PULSANTI */
+      .btn-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bordeaux);
+        color: var(--ivory);
+        font-size: 0.875rem;
+        font-weight: 500;
+        padding: 0.5rem 1.25rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-pill:hover {
+        opacity: 0.9;
+      }
+
+      /* CSS 04 — TITOLI E TESTI */
+      .hero-eyebrow {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: var(--olive-text);
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+        font-weight: 700;
+        line-height: 1.05;
+        color: var(--ink);
+        margin-bottom: 1.75rem;
+      }
+
+      .hero-title em {
+        font-style: italic;
+        color: var(--bordeaux);
+      }
+
+      /* CSS 05 — ACCESSIBILITÀ: SALTO AL CONTENUTO */
+      .skip-link {
+        position: absolute;
+        top: -100px;
+        left: 1rem;
+        background: var(--bordeaux);
+        color: var(--ivory);
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+        z-index: 9999;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: top 0.2s;
+      }
+
+      .skip-link:focus {
+        top: 1rem;
+      }
+
+      /* CSS 06 — ELEMENTI TESTUALI CONDIVISI */
+      .section-eyebrow {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-weight: 500;
+        margin-bottom: 1.25rem;
+      }
+
+      .eyebrow-bordeaux {
+        color: var(--bordeaux);
+      }
+
+      .eyebrow-olive {
+        color: var(--olive-text);
+      }
+
+      .section-title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 700;
+        line-height: 1.15;
+        color: var(--ink);
+        margin-bottom: 1.5rem;
+      }
+
+      .section-title em {
+        font-style: italic;
+        color: var(--bordeaux);
+      }
+
+      .body-text {
+        color: rgba(28,28,28,0.8);
+        line-height: 1.75;
+        font-size: 1rem;
+      }
+
+      .body-text p + p {
+        margin-top: 1rem;
+      }
+
+      /* CSS 07 — SEZIONE CONTATTI */
+      .contatti {
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 5rem 1.5rem;
+      }
+
+      .contatti-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+
+      .contact-card {
+        background: var(--powder);
+        border: 1px solid var(--border);
+        border-radius: 2rem 6rem 2rem 2rem;
+        padding: 2.5rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      }
+
+      .contact-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.75rem;
+      }
+
+      .contact-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        flex-shrink: 0;
+        border-radius: 9999px;
+        background: rgba(92,26,26,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--bordeaux);
+      }
+
+      .contact-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--muted-fg);
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-value {
+        font-size: 1rem;
+        line-height: 1.4;
+        color: var(--ink);
+        word-break: break-all;
+      }
+
+      /* CSS 08 — FOOTER */
+      footer {
+        background: var(--ink);
+        padding: 3rem 1.5rem;
+        color: var(--ivory);
+      }
+
+      .footer-inner {
+        max-width: 72rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .footer-logo {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.125rem;
+      }
+
+      .footer-logo em {
+        font-style: italic;
+        color: #c98a8a;
+      }
+
+      .footer-note {
+        font-size: 0.75rem;
+        color: rgba(245,239,224,0.6);
+      }
+
+      .footer-details {
+        font-size: 0.75rem;
+        color: rgba(245,239,224,0.6);
+        margin-top: 0.25rem;
+      }
+
+      /* CSS 09 — PULSANTI DI CONTATTO FISSI */
+      .floating-actions {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .btn-float {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,.25);
+        text-decoration: none;
+        transition: transform 0.15s ease, opacity 0.2s;
+      }
+
+      .btn-float:hover {
+        transform: scale(1.08);
+        opacity: 0.9;
+      }
+
+      .btn-float--whatsapp {
+        background: #25D366;
+      }
+
+      .btn-float--email {
+        background: var(--bordeaux);
+      }
+
+      /* CSS 10 — REGOLE RESPONSIVE CONDIVISE */
+      @media (min-width: 768px) {
+        .footer-inner {
+          flex-direction: row;
+          text-align: left;
+        }
+
+      }
+
+      @media (max-width: 767px) {
+        .nav-links {
+          display: none;
+        }
+
+        .contatti-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-card {
+          border-radius: 1.5rem;
+        }
+
+      }
+
+      /* CSS 11 — MENU DI CONTATTO */
+      .booking-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 0;
+        background: var(--ivory);
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        padding: 0.5rem;
+        min-width: 220px;
+        z-index: 20;
+      }
+
+      .booking-menu.open {
+        display: block;
+      }
+
+      .booking-option {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.6rem;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: background 0.15s;
+      }
+
+      .booking-option:hover {
+        background: var(--powder);
+      }
+
+      .booking-trigger {
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+        margin: 0;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      /* CSS 12 — PAGINA CHI SONO: INTRODUZIONE E RITRATTO */
+      .page-main {
+        max-width: 72rem;
+        margin: auto;
+        padding: 9rem 1.5rem 5rem;
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: minmax(0,1.15fr) minmax(280px,.85fr);
+        gap: 4rem;
+        align-items: start;
+      }
+
+      .intro-copy {
+        max-width: 680px;
+      }
+
+      .intro-copy p {
+        margin-bottom: 1.2rem;
+      }
+
+      .intro-copy .section-title {
+        margin-top: 2.6rem;
+        margin-bottom: 1rem;
+        font-size: clamp(1.6rem,3vw,2.2rem);
+      }
+
+      .intro-copy .section-title:first-of-type {
+        margin-top: 0;
+      }
+
+      .portrait {
+        position: sticky;
+        top: 7rem;
+        aspect-ratio: 4/5;
+        background: rgba(122,122,74,.65);
+        border-radius: 2rem 6rem 2rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        color: var(--ivory);
+      }
+
+      /* CSS 13 — AMBITI E COLLEGAMENTI AI SERVIZI */
+      .areas {
+        background: var(--powder);
+        padding: 5rem 1.5rem;
+      }
+
+      .areas-inner {
+        max-width: 72rem;
+        margin: auto;
+      }
+
+      .areas-intro {
+        max-width: 690px;
+      }
+
+      .service-links {
+        list-style: none;
+        margin-top: 2rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .service-links li {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .service-links a {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.4rem .3rem;
+        text-decoration: none;
+        color: var(--ink);
+        align-items: center;
+      }
+
+      .service-links a:hover {
+        color: var(--bordeaux);
+      }
+
+      .service-links strong {
+        font-family: 'Playfair Display',Georgia,serif;
+        font-size: 1.3rem;
+      }
+
+      .service-links small {
+        display: block;
+        color: var(--muted-fg);
+        font-size: .88rem;
+        margin-top: .3rem;
+      }
+
+      .contact-card {
+        border-radius: 2rem 6rem 2rem 2rem;
+      }
+
+      .contact-value {
+        word-break: normal;
+      }
+
+      .contact-row {
+        margin-bottom: 1.3rem;
+      }
+
+      .nav-links a[aria-current=page] {
+        color: var(--bordeaux);
+        font-weight: 600;
+      }
+
+      /* CSS 14 — RESPONSIVE SPECIFICO DELLA PAGINA */
+      @media(max-width:767px) {
+        .page-main {
+          padding: 7rem 1.5rem 3rem;
+        }
+
+        .intro-grid, .contatti-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .portrait {
+          position: static;
+          max-height: 360px;
+          aspect-ratio: 4/3;
+          order: -1;
+        }
+
+        .areas {
+          padding: 3.5rem 1.5rem;
+        }
+
+        .nav-links {
+          display: flex;
+          flex-wrap: wrap;
+          gap: .7rem;
+          margin-top: .7rem;
+        }
+
+        nav {
+          display: block;
+        }
+
+        .nav-links a {
+          font-size: .75rem;
+        }
+
+        .nav-links .btn-pill {
+          display: none;
+        }
+
+      }
+
+      /* CSS 15 — FINITURE DELLA PAGINA: RITRATTO E CONTATTI */
+      .portrait {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: sticky;
+        object-fit: cover;
+      }
+
+      .intro-copy p {
+        color: var(--muted-fg);
+      }
+
+      .intro-copy .hero-eyebrow {
+        color: var(--olive-text);
+      }
+
+      .intro-copy .hero-title {
+        color: var(--ink);
+      }
+
+      .contact-value a {
+        color: inherit;
+      }
+
+      .service-links a:focus-visible, .btn-pill:focus-visible, .nav-links a:focus-visible {
+        outline: 3px solid var(--bordeaux);
+        outline-offset: 3px;
+      }
+
+      /* CSS 16 — FINITURE RESPONSIVE */
+      @media(max-width:767px) {
+        .portrait {
+          position: static;
+          aspect-ratio: 4/5;
+          max-height: none;
+        }
+
+        .intro-grid {
+          gap: 2rem;
+        }
+
+        .nav-links {
+          justify-content: flex-start;
+        }
+
+      }
+    </style>
+    <!-- 04 DATI STRUTTURATI -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://alessiadallava.it/chi-sono.html#webpage",
+            "url": "https://alessiadallava.it/chi-sono.html",
+            "name": "Chi sono | Alessia Rebecca Dall'Ava",
+            "inLanguage": "it-IT",
+            "isPartOf": {
+              "@id": "https://alessiadallava.it/#website"
+            },
+            "mainEntity": {
+              "@id": "https://alessiadallava.it/#alessia"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://alessiadallava.it/#alessia",
+            "name": "Alessia Rebecca Dall'Ava",
+            "jobTitle": "Psicologa",
+            "description": "Psicologa iscritta all'Albo degli Psicologi della Lombardia n. 28010 e psicoterapeuta in formazione presso il Centro Terapia Cognitiva di Milano.",
+            "identifier": {
+              "@type": "PropertyValue",
+              "name": "Numero di iscrizione all'Albo degli Psicologi della Lombardia",
+              "value": "28010"
+            },
+            "image": "https://alessiadallava.it/alessia-dallava-psicologa-milano-zona-porta-romana.jpg",
+            "workLocation": {
+              "@id": "https://alessiadallava.it/#studio"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://alessiadallava.it/#website",
+            "url": "https://alessiadallava.it/",
+            "name": "Alessia Dall'Ava - Psicologa a Milano"
+          },
+          {
+            "@type": "Place",
+            "@id": "https://alessiadallava.it/#studio",
+            "name": "Studio di psicologia - Alessia Dall'Ava",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Piazza Imperatore Tito 6",
+              "addressLocality": "Milano",
+              "addressRegion": "Lombardia",
+              "addressCountry": "IT"
+            }
+          }
+        ]
+      }
+    </script>
+    <!-- 05 PIXEL — INIZIALIZZAZIONE DEL TRACCIAMENTO -->
+    <script>
+      !function(w,d,s,u) {
+        if(w.oaiq)return;
+        var q=function() {
+          q.q.push(arguments)
+        };
+        q.q=[];
+        w.oaiq=q;
+        var j=d.createElement(s);
+        j.async=1;
+        j.src=u;
+        var f=d.getElementsByTagName(s)[0];
+        f.parentNode.insertBefore(j,f)
+      }(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
+      oaiq("init",{pixelId:"EUYPCWoPrYzXXTCAuu3XTu"});
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+    <!-- 06 NAVIGAZIONE -->
+    <header>
+      <nav aria-label="Navigazione principale">
+        <a class="nav-logo" href="/">Alessia <em>Dall'Ava</em></a>
+        <ul class="nav-links">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/chi-sono.html" aria-current="page">Chi sono</a>
+          </li>
+          <li>
+            <a href="#ambiti">Servizi</a>
+          </li>
+          <li>
+            <a href="#contatti">Contatti</a>
+          </li>
+        </ul>
+        <div class="booking-wrap" style="position:relative; display:inline-block;">
+          <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)"
+            aria-haspopup="true" aria-expanded="false" aria-controls="booking-menu-nav">
+          Scrivimi
+          </button>
+          <div class="booking-menu" id="booking-menu-nav">
+            <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20primo%20colloquio%20—%20alessiadallava.it&body=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo.%0A%0AGrazie" class="booking-option conversion-contact">
+              ✉️ Scrivi via email
+            </a>
+            <a href="https://wa.me/393338088278?text=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo." target="_blank" class="booking-option conversion-contact">
+              💬 Scrivi su WhatsApp
+            </a>
           </div>
         </div>
-        <div class="contact-row">
-          <div class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-            </svg>
+      </nav>
+    </header>
+    <main id="contenuto">
+      <!-- 07 PRESENTAZIONE — BIOGRAFIA E RITRATTO -->
+      <section class="page-main" aria-labelledby="titolo-pagina">
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <p class="hero-eyebrow">Chi sono · Psicologa a Milano</p>
+            <h1 class="hero-title" id="titolo-pagina">Piacere, sono <em>Alessia.</em></h1>
+            <p>Sono Alessia Rebecca Dall'Ava, psicologa iscritta all'Albo degli Psicologi della Lombardia. Nel mio studio a Milano offro uno spazio di ascolto e sostegno a chi attraversa un momento di difficoltà o di cambiamento, oppure desidera conoscere meglio sé stesso, le proprie emozioni e il proprio modo di stare in relazione con gli altri.</p>
+            <p>Lavoro con adolescenti, adulti e famiglie, accogliendo ogni persona con attenzione e rispetto per la propria storia. Ricevo nello studio in Piazza Imperatore Tito 6, a Milano, e online.</p>
+            <!-- FORMAZIONE E PERCORSO -->
+            <h2 class="section-title">Il mio <em>percorso.</em></h2>
+            <p>Sono iscritta all'Albo A degli Psicologi della Lombardia con il numero 28010. Sto proseguendo la mia formazione in psicoterapia presso il Centro Terapia Cognitiva di Milano. La formazione è per me parte di un lavoro che richiede studio, attenzione e disponibilità a continuare a imparare.</p>
+            <!-- MODO DI LAVORARE -->
+            <h2 class="section-title">Il mio modo di <em>lavorare.</em></h2>
+            <p>Il primo incontro è un'occasione per conoscerci e comprendere che cosa ti porta qui. Da quel momento possiamo costruire insieme un percorso che tenga conto dei tuoi tempi, delle tue esigenze e delle domande che desideri esplorare.</p>
+            <p>Mi interessa creare uno spazio in cui sia possibile dare un nome a ciò che si vive e guardare con più chiarezza alle proprie relazioni. Il lavoro prende forma nel dialogo, senza dare per scontato che esista una risposta uguale per tutti.</p>
+            <!-- Quando la pagina Approccio sarà online, inserire qui il link all'URL effettivo. -->
           </div>
+          <aside aria-label="Ritratto di Alessia">
+            <img class="portrait" src="alessia-dallava-psicologa-milano-zona-porta-romana.jpg" alt="Alessia Rebecca Dall'Ava, psicologa a Milano" width="600" height="750">
+          </aside>
+        </div>
+      </section>
+      <!-- 08 SERVIZI — AMBITI E LINK DI APPROFONDIMENTO -->
+      <section class="areas" id="ambiti" aria-labelledby="titolo-ambiti">
+        <div class="areas-inner">
+          <p class="section-eyebrow eyebrow-bordeaux">Di cosa mi occupo</p>
+          <h2 class="section-title" id="titolo-ambiti">Come posso <em>accompagnarti.</em></h2>
+          <p class="body-text areas-intro">Propongo percorsi di sostegno psicologico individuale e supporto a famiglie e genitori. Mi occupo anche di valutazione neuropsicologica. Puoi leggere una descrizione di ciascun servizio nella pagina dedicata.</p>
+          <ul class="service-links">
+            <li>
+              <a href="/supporto-psicologico.html#individuale"><span><strong>Supporto psicologico individuale</strong><small>Uno spazio per momenti di difficoltà, cambiamento o ricerca di sé.</small></span><span aria-hidden="true">↗</span></a>
+            </li>
+            <li>
+              <a href="/supporto-alla-genitorialita.html#famiglie"><span><strong>Supporto a famiglie e genitorialità</strong><small>Un accompagnamento nelle sfide della crescita e delle relazioni familiari.</small></span><span aria-hidden="true">↗</span></a>
+            </li>
+            <li>
+              <a href="/valutazione-cognitiva.html#valutazione"><span><strong>Valutazione neuropsicologica</strong><small>Valutazione del funzionamento cognitivo per bambini, adolescenti e adulti.</small></span><span aria-hidden="true">↗</span></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 09 CONTATTI -->
+      <section id="contatti" class="contatti">
+        <div class="contatti-grid">
           <div>
-            <p class="contact-label">Email</p>
-            <p class="contact-value">
-               <a href="mailto:alessia.dallava@gmail.com">
-                alessia.dallava@gmail.com
-              </a>
+            <p class="section-eyebrow eyebrow-olive">Contatti</p>
+            <h2 class="section-title font-serif">
+              Scrivimi,<br><em>iniziamo da qui.</em>
+            </h2>
+            <p class="body-text" style="max-width:24rem;">
+              Rispondo personalmente a ogni messaggio. Il primo colloquio è un momento per conoscerci, senza impegno e
+              senza fretta. Anche solo scrivere è già un primo passo.
             </p>
           </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
-            </svg>
+          <div class="contact-card">
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-label">Studio</p>
+                <p class="contact-value">Piazza Imperatore Tito 6, 20137 Milano</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-label">Email</p>
+                <p class="contact-value">
+                  <a href="mailto:alessia.dallava@gmail.com">
+                    alessia.dallava@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-label">Telefono</p>
+                <p class="contact-value">3338088278</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <p class="contact-label">Telefono</p>
-            <p class="contact-value">3338088278</p>
-          </div>
         </div>
+      </section>
+
+    </main>
+
+    <!-- 10 FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <p class="footer-logo font-serif">Alessia <em>Dall'Ava</em></p>
+        <p class="footer-note">© 2026 · Psicologa e Psicoterapeuta in formazione · Milano</p>
+        <p class="footer-details">
+          Iscrizione Albo degli Psicologi della Lombardia n. 28010 · P.IVA 14244000965
+        </p>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <p class="footer-logo font-serif">Alessia <em>Dall'Ava</em></p>
-      <p class="footer-note">© 2026 · Psicologa e Psicoterapeuta in formazione · Milano</p>
-      <p class="footer-details">
-        Iscrizione Albo degli Psicologi della Lombardia n. 28010 · P.IVA 14244000965
-      </p>
-    </div>
-  </footer>
-
-  <div class="floating-actions">
-    <a href="https://wa.me/393338088278?text=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo."
-       target="_blank" rel="noopener"
-       class="btn-float btn-float--whatsapp conversion-contact"
-       aria-label="Scrivimi su WhatsApp">
+    <!-- 11 CONTATTI FISSI — WHATSAPP ED EMAIL -->
+    <div class="floating-actions">
+      <a href="https://wa.me/393338088278?text=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo."
+        target="_blank" rel="noopener"
+        class="btn-float btn-float--whatsapp conversion-contact"
+        aria-label="Scrivimi su WhatsApp">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.44-4.4-1.2l-.31-.18-3.05.8.82-2.97-.2-.32A7.93 7.93 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.4-5.9c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
-    </a>
-    <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20colloquio%20—%20alessiadallava.it"
-       class="btn-float btn-float--email conversion-contact"
-       aria-label="Scrivimi una email">
+      </a>
+      <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20colloquio%20—%20alessiadallava.it"
+        class="btn-float btn-float--email conversion-contact"
+        aria-label="Scrivimi una email">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-      </svg>
-    </a>
-  </div>
-<script>
-    
-function toggleBookingMenu(button) {
-  const wrap = button.closest('.booking-wrap');
-  const menu = wrap.querySelector('.booking-menu');
-  const isOpen = menu.classList.contains('open');
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+      </a>
+    </div>
+    <!-- 12 JAVASCRIPT — MENU DI CONTATTO -->
+    <script>
 
-  // Chiude eventuali altri menu aperti
-  document.querySelectorAll('.booking-menu.open').forEach(function(openMenu) {
-    openMenu.classList.remove('open');
-  });
+      function toggleBookingMenu(button) {
+        const wrap = button.closest('.booking-wrap');
+        const menu = wrap.querySelector('.booking-menu');
+        const isOpen = menu.classList.contains('open');
 
-  document.querySelectorAll('.booking-trigger[aria-expanded="true"]').forEach(function(trigger) {
-    trigger.setAttribute('aria-expanded', 'false');
-  });
+        // Chiude eventuali altri menu aperti
+        document.querySelectorAll('.booking-menu.open').forEach(function(openMenu) {
+          openMenu.classList.remove('open');
+        });
 
-  // Apre/chiude quello cliccato
-  if (!isOpen) {
-    menu.classList.add('open');
-    button.setAttribute('aria-expanded', 'true');
-  }
-}
+        document.querySelectorAll('.booking-trigger[aria-expanded="true"]').forEach(function(trigger) {
+          trigger.setAttribute('aria-expanded', 'false');
+        });
 
-// Chiude il menu cliccando fuori
-document.addEventListener('click', function(event) {
-  if (!event.target.closest('.booking-wrap')) {
-    document.querySelectorAll('.booking-menu.open').forEach(function(menu) {
-      menu.classList.remove('open');
-    });
+        // Apre/chiude quello cliccato
+        if (!isOpen) {
+          menu.classList.add('open');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      }
 
-    document.querySelectorAll('.booking-trigger[aria-expanded="true"]').forEach(function(trigger) {
-      trigger.setAttribute('aria-expanded', 'false');
-    });
-  }
-});
+      // Chiude il menu cliccando fuori
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('.booking-wrap')) {
+          document.querySelectorAll('.booking-menu.open').forEach(function(menu) {
+            menu.classList.remove('open');
+          });
 
-// Chiude il menu con ESC
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    document.querySelectorAll('.booking-menu.open').forEach(function(menu) {
-      menu.classList.remove('open');
-    });
+          document.querySelectorAll('.booking-trigger[aria-expanded="true"]').forEach(function(trigger) {
+            trigger.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
 
-    document.querySelectorAll('.booking-trigger[aria-expanded="true"]').forEach(function(trigger) {
-      trigger.setAttribute('aria-expanded', 'false');
-    });
-  }
-});
-</script>
-    
-  <script>document.addEventListener('click',function(event){if(event.target.closest('.conversion-contact') && typeof window.oaiq === 'function'){window.oaiq('measure','appointment_scheduled',{type:'customer_action'});}});</script>
-</body>
+      // Chiude il menu con ESC
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          document.querySelectorAll('.booking-menu.open').forEach(function(menu) {
+            menu.classList.remove('open');
+          });
+
+          document.querySelectorAll('.booking-trigger[aria-expanded="true"]').forEach(function(trigger) {
+            trigger.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+    </script>
+
+    <!-- TRACCIAMENTO DEI CLIC SUI CONTATTI -->
+    <script>
+      document.addEventListener('click', function(event) {
+        if (event.target.closest('.conversion-contact') && typeof window.oaiq === 'function') {
+          window.oaiq('measure', 'appointment_scheduled', { type: 'customer_action' });
+        }
+      });
+    </script>
+  </body>
 </html>
