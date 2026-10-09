@@ -3,26 +3,27 @@
   <head>
     <!--
       MAPPA DEL FILE — Cerca queste etichette con Ctrl+F:
-      01 METADATI E SEO | 02 FONT | 03 CSS | 04 DATI STRUTTURATI
-      05 PIXEL | 06 NAVIGAZIONE | 07 PRESENTAZIONE | 08 SERVIZI
-      09 CONTATTI | 10 FOOTER | 11 CONTATTI FISSI | 12 JAVASCRIPT
-      I testi della pagina iniziano da 07 PRESENTAZIONE.
+      METADATI E SEO | FONT | STILI DELLA PAGINA | DATI STRUTTURATI
+      PIXEL E INIZIALIZZAZIONE DEL TRACCIAMENTO | NAV | PRESENTAZIONE
+      SERVIZI | CONTATTI | FOOTER | PULSANTI DI CONTATTO FISSI
+      JAVASCRIPT: MENU DI CONTATTO E CONVERSIONI
+      I testi della pagina iniziano dalla sezione PRESENTAZIONE.
       Le regole per schermi piccoli si trovano nei blocchi RESPONSIVE.
     -->
 
-    <!-- 01 METADATI E SEO -->
+    <!-- METADATI E SEO -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Chi sono | Alessia Rebecca Dall'Ava, psicologa a Milano</title>
     <meta name="description" content="Conosci Alessia Rebecca Dall'Ava, psicologa iscritta all'Albo della Lombardia. Il suo percorso e il lavoro con adolescenti, adulti e famiglie a Milano e online.">
     <link rel="canonical" href="https://alessiadallava.it/chi-sono.html">
-    <!-- 02 FONT -->
+    <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-    <!-- 03 CSS — STILI DELLA PAGINA -->
+    <!-- STILI DELLA PAGINA -->
     <style>
-      /* CSS 01 — BASE: RESET, COLORI E TIPOGRAFIA */
+      /* BASE: RESET, COLORI E TIPOGRAFIA */
       *, *::before, *::after {
         box-sizing: border-box;
         margin: 0;
@@ -58,7 +59,7 @@
         font-family: 'Playfair Display', Georgia, serif;
       }
 
-      /* CSS 02 — HEADER E NAVIGAZIONE */
+      /* ── NAV ── */
       header {
         position: fixed;
         inset: 0 0 auto 0;
@@ -110,7 +111,7 @@
         color: var(--bordeaux);
       }
 
-      /* CSS 03 — PULSANTI */
+      /* ── PULSANTI ── */
       .btn-pill {
         display: inline-flex;
         align-items: center;
@@ -131,7 +132,7 @@
         opacity: 0.9;
       }
 
-      /* CSS 04 — TITOLI E TESTI */
+      /* ── TITOLI E TESTI ── */
       .hero-eyebrow {
         font-size: 0.7rem;
         text-transform: uppercase;
@@ -155,7 +156,7 @@
         color: var(--bordeaux);
       }
 
-      /* CSS 05 — ACCESSIBILITÀ: SALTO AL CONTENUTO */
+      /* ── ACCESSIBILITÀ: SALTO AL CONTENUTO ── */
       .skip-link {
         position: absolute;
         top: -100px;
@@ -175,7 +176,7 @@
         top: 1rem;
       }
 
-      /* CSS 06 — ELEMENTI TESTUALI CONDIVISI */
+      /* ── ELEMENTI TESTUALI CONDIVISI ── */
       .section-eyebrow {
         font-size: 0.7rem;
         text-transform: uppercase;
@@ -216,7 +217,7 @@
         margin-top: 1rem;
       }
 
-      /* CSS 07 — SEZIONE CONTATTI */
+      /* ── CONTATTI ── */
       .contatti {
         max-width: 72rem;
         margin: 0 auto;
@@ -271,7 +272,7 @@
         word-break: break-all;
       }
 
-      /* CSS 08 — FOOTER */
+      /* ── FOOTER ── */
       footer {
         background: var(--ink);
         padding: 3rem 1.5rem;
@@ -310,7 +311,7 @@
         margin-top: 0.25rem;
       }
 
-      /* CSS 09 — PULSANTI DI CONTATTO FISSI */
+      /* ── PULSANTI DI CONTATTO FISSI ── */
       .floating-actions {
         position: fixed;
         bottom: 1.5rem;
@@ -346,7 +347,7 @@
         background: var(--bordeaux);
       }
 
-      /* CSS 10 — REGOLE RESPONSIVE CONDIVISE */
+      /* ── RESPONSIVE ── */
       @media (min-width: 768px) {
         .footer-inner {
           flex-direction: row;
@@ -370,7 +371,7 @@
 
       }
 
-      /* CSS 11 — MENU DI CONTATTO */
+      /* ── MENU DI CONTATTO ── */
       .booking-menu {
         display: none;
         position: absolute;
@@ -412,7 +413,7 @@
         appearance: none;
       }
 
-      /* CSS 12 — PAGINA CHI SONO: INTRODUZIONE E RITRATTO */
+      /* ── PRESENTAZIONE ── */
       .page-main {
         max-width: 72rem;
         margin: auto;
@@ -458,7 +459,7 @@
         color: var(--ivory);
       }
 
-      /* CSS 13 — AMBITI E COLLEGAMENTI AI SERVIZI */
+      /* ── SERVIZI ── */
       .areas {
         background: var(--powder);
         padding: 5rem 1.5rem;
@@ -526,7 +527,7 @@
         font-weight: 600;
       }
 
-      /* CSS 14 — RESPONSIVE SPECIFICO DELLA PAGINA */
+      /* ── RESPONSIVE DELLA PAGINA ── */
       @media(max-width:767px) {
         .page-main {
           padding: 7rem 1.5rem 3rem;
@@ -568,7 +569,7 @@
 
       }
 
-      /* CSS 15 — FINITURE DELLA PAGINA: RITRATTO E CONTATTI */
+      /* ── FINITURE DELLA PAGINA: RITRATTO E CONTATTI ── */
       .portrait {
         display: block;
         width: 100%;
@@ -598,7 +599,7 @@
         outline-offset: 3px;
       }
 
-      /* CSS 16 — FINITURE RESPONSIVE */
+      /* ── FINITURE RESPONSIVE ── */
       @media(max-width:767px) {
         .portrait {
           position: static;
@@ -616,7 +617,7 @@
 
       }
     </style>
-    <!-- 04 DATI STRUTTURATI -->
+    <!-- DATI STRUTTURATI -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -671,7 +672,7 @@
         ]
       }
     </script>
-    <!-- 05 PIXEL — INIZIALIZZAZIONE DEL TRACCIAMENTO -->
+    <!-- PIXEL E INIZIALIZZAZIONE DEL TRACCIAMENTO -->
     <script>
       !function(w,d,s,u) {
         if(w.oaiq)return;
@@ -691,23 +692,15 @@
   </head>
   <body>
     <a class="skip-link" href="#contenuto">Vai al contenuto</a>
-    <!-- 06 NAVIGAZIONE -->
+    <!-- NAV -->
     <header>
       <nav aria-label="Navigazione principale">
-        <a class="nav-logo" href="/">Alessia <em>Dall'Ava</em></a>
+        <a href="/" class="nav-logo">Alessia <em>Dall'Ava</em></a>
         <ul class="nav-links">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/chi-sono.html" aria-current="page">Chi sono</a>
-          </li>
-          <li>
-            <a href="#ambiti">Servizi</a>
-          </li>
-          <li>
-            <a href="#contatti">Contatti</a>
-          </li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/chi-sono.html" aria-current="page">Chi sono</a></li>
+          <li><a href="#ambiti">Servizi</a></li>
+          <li><a href="#contatti">Contatti</a></li>
         </ul>
         <div class="booking-wrap" style="position:relative; display:inline-block;">
           <button type="button" class="btn-pill booking-trigger" onclick="toggleBookingMenu(this)"
@@ -726,7 +719,8 @@
       </nav>
     </header>
     <main id="contenuto">
-      <!-- 07 PRESENTAZIONE — BIOGRAFIA E RITRATTO -->
+      
+      <!-- PRESENTAZIONE -->
       <section class="page-main" aria-labelledby="titolo-pagina">
         <div class="intro-grid">
           <div class="intro-copy">
@@ -747,8 +741,9 @@
             <img class="portrait" src="alessia-dallava-psicologa-milano-zona-porta-romana.jpg" alt="Alessia Rebecca Dall'Ava, psicologa a Milano" width="600" height="750">
           </aside>
         </div>
-      </section>
-      <!-- 08 SERVIZI — AMBITI E LINK DI APPROFONDIMENTO -->
+        </section>
+      
+      <!-- SERVIZI -->
       <section class="areas" id="ambiti" aria-labelledby="titolo-ambiti">
         <div class="areas-inner">
           <p class="section-eyebrow eyebrow-bordeaux">Di cosa mi occupo</p>
@@ -768,7 +763,7 @@
         </div>
       </section>
 
-      <!-- 09 CONTATTI -->
+      <!-- CONTATTI -->
       <section id="contatti" class="contatti">
         <div class="contatti-grid">
           <div>
@@ -825,7 +820,7 @@
 
     </main>
 
-    <!-- 10 FOOTER -->
+    <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
         <p class="footer-logo font-serif">Alessia <em>Dall'Ava</em></p>
@@ -836,7 +831,7 @@
       </div>
     </footer>
 
-    <!-- 11 CONTATTI FISSI — WHATSAPP ED EMAIL -->
+    <!-- PULSANTI DI CONTATTO FISSI -->
     <div class="floating-actions">
       <a href="https://wa.me/393338088278?text=Buongiorno%20%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20colloquio%20conoscitivo."
         target="_blank" rel="noopener"
@@ -852,7 +847,7 @@
         </svg>
       </a>
     </div>
-    <!-- 12 JAVASCRIPT — MENU DI CONTATTO -->
+    <!-- JAVASCRIPT: MENU DI CONTATTO E CONVERSIONI -->
     <script>
 
       function toggleBookingMenu(button) {
