@@ -465,6 +465,23 @@
       }
     }
 
+       /* AZIONI NELLE SCHEDE DEI SERVIZI */
+    .percorso-card { display: flex; flex-direction: column; }
+    .service-card-actions {
+      display: flex; flex-direction: column; align-items: flex-start;
+      gap: .85rem; margin-top: auto; padding-top: .5rem;
+    }
+    .service-card-actions .btn-pill { font-size: .82rem; text-align: center; }
+    .service-card-actions .booking-wrap { position: relative; }
+    .service-card-actions .booking-menu {
+      top: auto; bottom: calc(100% + .5rem); left: 0;
+      min-width: 220px;
+    }
+    .service-card-actions .booking-option { white-space: nowrap; }
+    @media (max-width: 767px) {
+      .service-card-actions .booking-menu { left: 0; right: auto; }
+    }
+
     /* ── QUOTE ── */ 
       
       .quote-section {
@@ -910,7 +927,20 @@
             </div>
             <h3>Supporto psicologico individuale</h3>
             <p>Uno spazio di ascolto per momenti di difficoltà, cambiamento o ricerca di sé.</p>
-            <a href="supporto-psicologico.html" class="card-link">Scopri di più →</a>
+            <div class="service-card-actions">
+              <a href="/supporto-psicologico.html" class="card-link">Scopri di più →</a>
+              <div class="booking-wrap">
+                <button type="button" class="btn-pill booking-trigger"
+                  onclick="toggleBookingMenu(this)" aria-haspopup="true"
+                  aria-expanded="false" aria-controls="booking-menu-psicologico">
+                  Richiedi un appuntamento
+                </button>
+                <div class="booking-menu" id="booking-menu-psicologico">
+                  <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20informazioni%20-%20supporto%20psicologico%20individuale&amp;body=Buongiorno%20Alessia%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20appuntamento%20relativo%20al%20servizio%20di%20supporto%20psicologico%20individuale.%20Grazie." class="booking-option conversion-contact">✉️ Scrivi via email</a>
+                  <a href="https://wa.me/393338088278?text=Buongiorno%20Alessia%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20appuntamento%20relativo%20al%20servizio%20di%20supporto%20psicologico%20individuale.%20Grazie." target="_blank" rel="noopener noreferrer" class="booking-option conversion-contact">💬 Scrivi su WhatsApp</a>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="percorso-card">
             <div class="icon-circle">
@@ -921,9 +951,22 @@
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
             </div>
-            <h3>Supporto alla genitorialità</h3>
+           <h3>Supporto alla genitorialità</h3>
             <p>Accompagno genitori e famiglie nelle sfide legate alla crescita e alle relazioni.</p>
-            <a href="supporto-alla-genitorialita.html" class="card-link">Scopri di più →</a>
+            <div class="service-card-actions">
+              <a href="/supporto-alla-genitorialita.html" class="card-link">Scopri di più →</a>
+              <div class="booking-wrap">
+                <button type="button" class="btn-pill booking-trigger"
+                  onclick="toggleBookingMenu(this)" aria-haspopup="true"
+                  aria-expanded="false" aria-controls="booking-menu-genitorialita">
+                  Richiedi un appuntamento
+                </button>
+                <div class="booking-menu" id="booking-menu-genitorialita">
+                  <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20informazioni%20-%20supporto%20alla%20genitorialit%C3%A0&amp;body=Buongiorno%20Alessia%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20appuntamento%20relativo%20al%20servizio%20di%20supporto%20alla%20genitorialit%C3%A0.%20Grazie." class="booking-option conversion-contact">✉️ Scrivi via email</a>
+                  <a href="https://wa.me/393338088278?text=Buongiorno%20Alessia%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20appuntamento%20relativo%20al%20servizio%20di%20supporto%20alla%20genitorialit%C3%A0.%20Grazie." target="_blank" rel="noopener noreferrer" class="booking-option conversion-contact">💬 Scrivi su WhatsApp</a>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="percorso-card">
             <div class="icon-circle">
@@ -934,7 +977,20 @@
             </div>
             <h3>Valutazione cognitiva</h3>
             <p>Valutazione del funzionamento cognitivo per bambini, adolescenti e adulti.</p>
-            <a href="valutazione-cognitiva.html" class="card-link">Scopri di più →</a>
+            <div class="service-card-actions">
+              <a href="/valutazione-cognitiva.html" class="card-link">Scopri di più →</a>
+              <div class="booking-wrap">
+                <button type="button" class="btn-pill booking-trigger"
+                  onclick="toggleBookingMenu(this)" aria-haspopup="true"
+                  aria-expanded="false" aria-controls="booking-menu-valutazione">
+                  Richiedi un appuntamento
+                </button>
+                <div class="booking-menu" id="booking-menu-valutazione">
+                  <a href="mailto:alessia.dallava@gmail.com?subject=Richiesta%20informazioni%20-%20valutazione%20cognitiva&amp;body=Buongiorno%20Alessia%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20appuntamento%20relativo%20al%20servizio%20di%20valutazione%20cognitiva.%20Grazie." class="booking-option conversion-contact">✉️ Scrivi via email</a>
+                  <a href="https://wa.me/393338088278?text=Buongiorno%20Alessia%2C%20vorrei%20avere%20informazioni%20per%20un%20primo%20appuntamento%20relativo%20al%20servizio%20di%20valutazione%20cognitiva.%20Grazie." target="_blank" rel="noopener noreferrer" class="booking-option conversion-contact">💬 Scrivi su WhatsApp</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="percorso-btn-center">
